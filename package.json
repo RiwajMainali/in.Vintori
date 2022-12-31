@@ -1,5 +1,5 @@
 {
-  "name": "in.vintori_fix",
+  "name": "in.vintori",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+    "@expo/webpack-config": "^0.17.2",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
