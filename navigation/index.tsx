@@ -97,7 +97,7 @@ function BottomTabNavigator() {
         name="Test"
         component={test_Screen}
         options={{
-          title: 'Test Tab',
+          title: 'Test',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
