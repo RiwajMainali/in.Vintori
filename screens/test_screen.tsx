@@ -9,9 +9,10 @@ export default function TestScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Testing Tab</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text>henlo</Text>
       <Text style={styles.container}>henlo henlo</Text>
-      <CustomButton text={'add'} />
+      <CustomButton text={'+'} />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/test_Screen.tsx" />
     </View>

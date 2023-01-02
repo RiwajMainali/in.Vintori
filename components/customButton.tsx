@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         marginTop: 50,
     },*/
     button: {
-        flexDirection: 'row',
+        //flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         width: 50,
@@ -46,12 +46,22 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderStyle: 'solid',
         borderColor: 'black',
+        //textAlign: 'center',
     },
     text: {
         fontFamily: 'System',
-        fontSize: 16,
+        fontSize: 64,
         color: 'black',
-        fontWeight: '400'
+        fontWeight: '200',
+        //top: '1',
+        //left: '25',
+        //right: '25',
+        //bottom: '10',
+        //marginTop: '25%',
+        //marginBottom: '25%',
+        
+        position: 'relative',
+        //textAlign: 'center',
     },
     unSelected: {
         color: 'white'
