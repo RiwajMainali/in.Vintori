@@ -5,15 +5,27 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
+//pages
+import Root from './pages/Root';
+import Test from './pages/Test';
+
 //root should probs include navbar
-const Root = () => /*<div>Root heading</div>*/ <App />;
-const Dashboard = () => <div>Dashboard</div>
-const router = createBrowserRouter(createRoutesFromElements(
-        <Route path="/" element={<Root />}>
+/*const Root = () => /*<div>Root heading</div>;
+const Dashboard = () => <div>Dashboard</div>*/
+
+const router = createBrowserRouter([
+        /*<Route path="/" element={<Root />}>
             <Route path="/dashboard" element={<Dashboard />} />
-        </Route>
-    
-));
+        </Route>*/
+    {
+        path: '/',
+        element: <Root />,
+    },
+    {
+        path: '/test',
+        element: <Test />,
+    },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

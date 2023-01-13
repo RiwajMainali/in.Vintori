@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { useSpring, animated } from 'react-spring';
+import React from 'react';
+/*import { View, Text, StyleSheet } from 'react-native';
+import { useSpring, animated } from 'react-springs';
 import Animated from 'react-native-reanimated';
 
 interface MyButtonProps {
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default MyButton;
+export default MyButton;*/

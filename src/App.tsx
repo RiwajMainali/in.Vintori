@@ -3,6 +3,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import './App.css';
 //import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Root from './pages/Root';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function Index() {
   return <h2>Home</h2>;
@@ -38,14 +41,14 @@ function Product({ match }: { match: { params: { id: string } } }) {
 }
 
 export default AppRouter;*/
-import Home from './Components/Home';
-import About from './Components/About';
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route path="/" element={<Home text={"Test"} />} />
+        <Route path="/" element={<Root />}></Route>
+        <Route path="/home" element={<Home text={"Test"} />} />
         <Route path="/about" element={<About text={"Test"} />} />
       </BrowserRouter>
     </div>
