@@ -22,7 +22,7 @@ function Root() {
             </a>
             <ul>
                 <li>
-                    <Link to='/test'><Test /></Link>
+                    <Link to='/test'>Testing Page</Link>
                 </li>
             </ul>
             </header>
