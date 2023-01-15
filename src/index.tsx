@@ -8,6 +8,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 //pages
 import Root from './pages/Root';
 import Test from './pages/Test';
+import InventorySelection from './pages/InventorySelection';
 
 import NavBar from './components/NavBar';
 //root should probs include navbar
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
         path: '/test',
         element: <Test />,
+    },
+    {
+        path: '/dashboard',
+        element: <InventorySelection />,
     },
 ]);
 

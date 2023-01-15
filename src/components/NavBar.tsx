@@ -7,10 +7,9 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 export default function NavBar() {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState('');
 
     const handleChange = ( event: React.SyntheticEvent, newValue: any ) => {
-        
         setValue(newValue);
     };
 
@@ -19,7 +18,7 @@ export default function NavBar() {
             <BottomNavigation 
                 sx={{ width: '100%', position: 'fixed', bottom: 0 }}
                 value={value}
-                onChange={handleChange}
+                onChange={ handleChange }
             >
                 <BottomNavigationAction
                     label="App"
@@ -34,7 +33,11 @@ export default function NavBar() {
                     component={ Link }
                     to='/test'
                 />
-
+                <BottomNavigationAction
+                    label="Dashboard"
+                    icon={ <HelpOutline /> }
+                    component={ Link } to='/dashboard'
+                />
             </BottomNavigation>
         </div>
     );
