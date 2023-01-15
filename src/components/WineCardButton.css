@@ -1,0 +1,28 @@
+#top {
+    display: flex;
+    flex-direction: row;
+    font-family: 'IBM Plex Mono Bold';
+}
+
+#location {
+    font-size: 12px;
+}
+
+#qty {
+    font-size: 12px;
+    margin-left: 5em;
+}
+
+#middle {
+    font-family: 'IBM Plex Mono Bold';
+}
+#name {
+    font-size: 24px;
+}
+
+#bottom {
+    font-family: 'IBM Plex Mono Bold';
+}
+#notes {
+    font-size: 12px;
+}

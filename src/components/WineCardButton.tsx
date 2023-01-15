@@ -2,6 +2,7 @@ import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import './WineCardButton.css';
 
 export default function WineCardButton() {
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
@@ -22,13 +23,15 @@ export default function WineCardButton() {
             <Button
                 style={{
                     minWidth: '50px',
-                    maxWidth: '50px'
+                    maxWidth: '50px',
+                    minHeight: '50px',
+                    maxHeight: '50px',
                 }}
                 aria-describedby={id}
                 variant='outlined'
                 onClick={ handleClick }
             >
-                ?
+                {/*optional button label */}
             </Button>
             <Popover
                 id={id}
@@ -41,7 +44,32 @@ export default function WineCardButton() {
                 }}
             >
                 <Typography sx={{ p: 2 }}>
-                    popover content.
+                    <div id='top'>
+                        <div id='location'>
+                            Located at: ?
+                        </div>
+                    
+                        <div id='qty'>
+                            Qty: ?
+                        </div>
+                    </div>
+
+                    < br />< br /> <br />
+                    
+                    <div id='middle'>
+                        <div id='name'>
+                            Name: ?
+                        </div>
+                    </div>
+                    
+                    < br />< br /> <br />
+
+                    <div id='bottom'>
+                        <div id='notes'>
+                            Notes
+                        </div>
+                    </div>
+                    
                 </Typography>
             </Popover>
         </div>

@@ -1,40 +1,41 @@
-import React from 'react';
-import { useState } from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import { Home, HelpOutline } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { Home, HelpOutline, Park } from '@mui/icons-material';
+import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
 
-export default function NavBar() {
-    const [value, setValue] = React.useState('');
+ function NavBar() {
+    const path = useLocation();
 
-    const handleChange = ( event: React.SyntheticEvent, newValue: any ) => {
-        setValue(newValue);
-    };
-
+    //route buttons
     return (
         <div className='NavBar'>
             <BottomNavigation 
                 sx={{ width: '100%', position: 'fixed', bottom: 0 }}
-                value={value}
-                onChange={ handleChange }
+                value={path.pathname}
             >
+                {   /*individual routes*/   }
+                <BottomNavigationAction
+                    label="root"
+                    value='/root'
+                    icon={ <Park /> }
+                    component={ Link } to='/root'
+                />
                 <BottomNavigationAction
                     label="App"
-                    //value="app"
+                    value='/'
                     icon={ <Home /> }
                     component={ Link } to='/'
                 />
                 <BottomNavigationAction
                     label="Tests"
-                    //value="test"
+                    value="/test"
                     icon={ <HelpOutline /> }
-                    component={ Link }
-                    to='/test'
+                    component={ Link } to='/test'
                 />
                 <BottomNavigationAction
                     label="Dashboard"
+                    value="/dashboard"
                     icon={ <HelpOutline /> }
                     component={ Link } to='/dashboard'
                 />
@@ -42,3 +43,5 @@ export default function NavBar() {
         </div>
     );
 }
+
+export default NavBar;

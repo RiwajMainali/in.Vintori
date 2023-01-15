@@ -52,6 +52,7 @@ function App() {
         <Route path="/home" element={<Home text={"Test"} />} />
         <Route path="/about" element={<About text={"Test"} />} />
       </BrowserRouter>*/}
+      <NavBar />
       
     </div>
   );

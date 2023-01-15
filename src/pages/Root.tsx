@@ -27,7 +27,7 @@ function Root() {
                 </li>
             </ul>
             </header>
-            <NavBar />
+            <NavBar/>
         </div>
     );
 }
