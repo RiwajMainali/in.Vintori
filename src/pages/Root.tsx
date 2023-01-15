@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import '../App.css';
 import { Router, Route, Link } from 'react-router-dom';
 import Test from './Test';
+import NavBar from '../components/NavBar';
 
 function Root() {
     return (
@@ -26,7 +27,7 @@ function Root() {
                 </li>
             </ul>
             </header>
-            
+            <NavBar />
         </div>
     );
 }

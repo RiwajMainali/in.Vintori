@@ -9,6 +9,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Root from './pages/Root';
 import Test from './pages/Test';
 
+import NavBar from './components/NavBar';
 //root should probs include navbar
 /*const Root = () => /*<div>Root heading</div>;
 const Dashboard = () => <div>Dashboard</div>*/
@@ -34,6 +35,7 @@ root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
     {/*<App />*/}
+    
   </React.StrictMode>
 );
 

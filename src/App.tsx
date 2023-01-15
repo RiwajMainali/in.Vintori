@@ -6,6 +6,7 @@ import './App.css';
 import Root from './pages/Root';
 import Home from './pages/Home';
 import About from './pages/About';
+import NavBar from './components/NavBar';
 
 function Index() {
   return <h2>Home</h2>;
@@ -46,11 +47,12 @@ export default AppRouter;*/
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/*<BrowserRouter>
         <Route path="/" element={<Root />}></Route>
         <Route path="/home" element={<Home text={"Test"} />} />
         <Route path="/about" element={<About text={"Test"} />} />
-      </BrowserRouter>
+      </BrowserRouter>*/}
+      
     </div>
   );
 }
