@@ -4,17 +4,7 @@ import Add from '@mui/icons-material/Add';
 
 import NavBar from "../components/NavBar";
 import IconButton from "../components/IconButton";
-
-const AddCellarForm = (cellarName: string, cellarWidth: number, cellarHeight: number ) => {
-    return (
-        <form>
-            <label>
-                new cellar name:
-                <input type="text" />
-            </label>
-        </form>
-    );
-}
+import AddCellar from "../components/AddCellar";
 
 export default function InventorySelection() {
     //to be defined...

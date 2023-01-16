@@ -10,6 +10,8 @@ import Root from './pages/Root';
 import Test from './pages/Test';
 import InventorySelection from './pages/InventorySelection';
 
+import ErrorPage from './pages/error-page';
+
 import NavBar from './components/NavBar';
 //root should probs include navbar
 /*const Root = () => /*<div>Root heading</div>;
@@ -22,6 +24,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement: <ErrorPage />,
     },
     {
         path: '/root',
