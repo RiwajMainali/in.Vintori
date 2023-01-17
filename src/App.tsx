@@ -3,10 +3,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import './App.css';
 //import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
 import Root from './pages/Root';
 import Home from './pages/Home';
 import About from './pages/About';
 import NavBar from './components/NavBar';
+import Cellar from './pages/Cellar';
 
 function Index() {
   return <h2>Home</h2>;
@@ -52,6 +55,7 @@ function App() {
         <Route path="/home" element={<Home text={"Test"} />} />
         <Route path="/about" element={<About text={"Test"} />} />
       </BrowserRouter>*/}
+      <Outlet />
       <NavBar />
       
     </div>

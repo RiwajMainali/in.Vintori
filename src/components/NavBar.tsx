@@ -34,10 +34,10 @@ import './NavBar.css';
                     component={ Link } to='/test'
                 />
                 <BottomNavigationAction
-                    label="Dashboard"
-                    value="/dashboard"
+                    label="Cellars"
+                    value="/cellars"
                     icon={ <HelpOutline /> }
-                    component={ Link } to='/dashboard'
+                    component={ Link } to='/cellars'
                 />
             </BottomNavigation>
         </div>
