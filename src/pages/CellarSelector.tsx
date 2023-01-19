@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import NavBar from "../components/NavBar";
 import IconButton from "../components/IconButton";
 import AddCellar from "../components/AddCellar";
+import CellarList from "../components/CellarList";
 
 function renderRow(props: ListChildComponentProps) {
     const { index, style } = props;
@@ -65,7 +66,7 @@ export default function CellarSelector() {
                     { renderRow }
                 </FixedSizeList>
             </Box>
-            <nav>
+            {/*<nav>
                     <ul>
                         <li>
                             <Link to={'/cellars/0'}>
@@ -78,7 +79,8 @@ export default function CellarSelector() {
                             </Link>
                         </li>
                     </ul>
-            </nav>
+            </nav>*/}
+            <CellarList />
         </div>
     );
 }

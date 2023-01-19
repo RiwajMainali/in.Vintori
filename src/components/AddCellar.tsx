@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
+import { Form } from 'react-router-dom';
 
 import IconButton from './IconButton';
 import Close from '@mui/icons-material/Close';
@@ -37,20 +38,23 @@ const AddCellar: React.FC<FormData> = ({ cellarName, cellarWidth, cellarHeight})
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-
+                
             
-                <form>
+                <Form method="post" action="/add">
                     <label>
                         new cellar name:
-                        <input type="text" name='name' />
+                        
                     </label>
+                    <input type="text" name='name' />
                     <TextField
                         id='outlined-basic'
                         label='new cellar name*'
                         variant='outlined'
                         //onSubmit={ cellarName }
                     />
-                </form>
+                    <button type="submit">Add Cellar</button>
+                    modal
+                </Form>
             </Modal>
             
         </Box>
