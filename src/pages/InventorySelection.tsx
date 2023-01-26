@@ -4,6 +4,7 @@ import Add from '@mui/icons-material/Add';
 
 import NavBar from "../components/NavBar";
 import IconButton from "../components/IconButton";
+import Hamburger from '../components/Hamburger';
 
 const AddCellarForm = (cellarName: string, cellarWidth: number, cellarHeight: number ) => {
     return (
@@ -22,17 +23,19 @@ export default function InventorySelection() {
 
     return (
         <div>
-            <header>
-                <div id="page-title">
+            <Hamburger />
+            {/*<header>
+                <div id="page-title">    
                     Inventory Selection Page
                 </div>
-                
-            </header>
+            </header> */}
             <IconButton
                 //onClick={<AddCellarForm />}
                 icon={<Add />}
             />
             <NavBar />
+            
         </div>
+        
     );
 }

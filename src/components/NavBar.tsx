@@ -41,6 +41,7 @@ import './NavBar.css';
                 />
             </BottomNavigation>
         </div>
+
     );
 }
 
