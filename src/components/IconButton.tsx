@@ -4,6 +4,7 @@ import { Box, Button } from '@mui/material';
 import './IconButton.css';
 
 interface iconImg {
+    children?: React.ReactNode;
     onClick?: () => void;
     //size?: number;
     icon: JSX.Element;
@@ -11,7 +12,11 @@ interface iconImg {
     disabled?: boolean;
 }
 
-const IconButton: React.FC<iconImg> = ({ onClick, /*size = 40,*/ icon, color = 'black', disabled = false }) => {
+const handleClick = () => {
+    console.log('button clicked!');
+};
+
+const IconButton: React.FC<iconImg> = ({children, onClick, /*size = 40,*/ icon, color = 'black', disabled = false }) => {
     /*const buttonStyle = {
         width: size,
         height: size,
@@ -22,15 +27,20 @@ const IconButton: React.FC<iconImg> = ({ onClick, /*size = 40,*/ icon, color = '
         color,
     };*/
 
+        
     return (
         <Box>
             {/*<div className="iconImg">*/}
-                <Button 
-                    style={{ maxWidth: "36px", minWidth: "36px" }}
-                    variant="outlined">
+                <button 
+                    className='iconImg'
+                    style={{ /*maxWidth: "36px", minWidth: "36px",*/ backgroundColor: 'transparent', border: 'none' }}
+                    //variant="outlined"
+                    onClick={ onClick ? onClick : handleClick }
+                    >
+                        {children}
                         {icon}
-                </Button>
-            {/*{</div>*/}
+                </button>
+            {/*</div>*/}
         </Box>
     );
 }

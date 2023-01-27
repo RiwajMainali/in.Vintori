@@ -7,12 +7,16 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 import { Link } from 'react-router-dom';
+//import { getCellars } from '../components/CellarList';
+
 
 import NavBar from "../components/NavBar";
 import IconButton from "../components/IconButton";
 import AddCellar from "../components/AddCellar";
+import AddCellarForm from '../components/AddCellarForm';
 import CellarList from "../components/CellarList";
 
+//row item button
 function renderRow(props: ListChildComponentProps) {
     const { index, style } = props;
 
@@ -42,10 +46,10 @@ export default function CellarSelector() {
                 </div>
                 
             </header>
-            <IconButton
-                //onClick={<AddCellarForm />}
+            {/*<IconButton
+                onClick={<AddCellarForm />}
                 icon={<Add />}
-            />
+            />*/}
             <NavBar />
 
             <Box
@@ -80,6 +84,7 @@ export default function CellarSelector() {
                         </li>
                     </ul>
             </nav>*/}
+            <AddCellar />
             <CellarList />
         </div>
     );

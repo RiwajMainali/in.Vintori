@@ -1,3 +1,7 @@
 .iconImg{
-    margin: 0
+    margin: 0;
+    background-color: transparent;
+    color: black;
+    min-height: max-content;
+    min-width: fit-content;
 }

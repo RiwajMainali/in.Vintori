@@ -3,8 +3,10 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import { Form } from 'react-router-dom';
+import * as Dialog from '@radix-ui/react-dialog';
 
 import IconButton from './IconButton';
+import AddCellarForm from './AddCellarForm';
 import Close from '@mui/icons-material/Close';
 import Add from '@mui/icons-material/Add';
 
@@ -19,28 +21,35 @@ const AddCellar: React.FC<FormData> = ({ cellarName, cellarWidth, cellarHeight})
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    
+    const handleClick = () => {
+        console.log('button clicked!');
+        <AddCellarForm open={false} onClose={handleClose} />
+    };
 
     return (
     <div>
-        <IconButton
+        {/*<IconButton
             onClick={handleOpen}
-            icon={ <Add /> }
-        />
-        <Box>
-            <IconButton 
-                onClick={ handleClose }
-                icon={<Close />} 
-            />
-            <Modal
+            icon={<Add />}
+        >*/}
+            
+            
+
+            {/*<Modal
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
                 
-            
+                
+                
                 <Form method="post" action="/add">
+                    <IconButton 
+                        onClick={ handleClose }
+                        icon={<Close />}
+                        children={null} 
+                    />
                     <label>
                         new cellar name:
                         
@@ -55,9 +64,48 @@ const AddCellar: React.FC<FormData> = ({ cellarName, cellarWidth, cellarHeight})
                     <button type="submit">Add Cellar</button>
                     modal
                 </Form>
-            </Modal>
+            </Modal>*/}
             
-        </Box>
+            <Dialog.Root>
+                <Dialog.Trigger asChild>
+                    <button
+                        className='addCellarButton'
+                        style={{
+                            backgroundColor: 'transparent',
+                            border: 'none'
+                        }}
+                    >
+                        <Add />
+                    </button>
+                </Dialog.Trigger>
+                <Dialog.Portal>
+                    <Dialog.Overlay className='DialogOverlay'/>
+                    <Dialog.Content className='DialogContent'>
+                        <Dialog.Title>
+                            Add a Cellar
+                        </Dialog.Title>
+
+                        <Dialog.Description>
+                            Adds a new cellar to your collection
+                        </Dialog.Description>
+
+                        <fieldset className='Fieldset'>
+                            <label className='label' htmlFor='name'>
+                                New Cellar Name*
+                            </label>
+                            <input className='input' id='name' />
+                        </fieldset>
+
+                        <Dialog.Close asChild>
+                            <IconButton icon={<Close />} />
+                        </Dialog.Close>
+                    </Dialog.Content>
+                </Dialog.Portal>
+            </Dialog.Root>
+        
+        {/*</IconButton>*/}
+        break
+        {/*<AddCellarForm open={false} onClose={handleClose} />*/}
     </div>
     );
 }
