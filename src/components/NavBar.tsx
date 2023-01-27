@@ -1,8 +1,9 @@
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { Home, HelpOutline, Park } from '@mui/icons-material';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
+import Cellar from '../pages/Cellar';
 
  function NavBar() {
     const path = useLocation();
@@ -19,13 +20,14 @@ import './NavBar.css';
                     label="root"
                     value='/root'
                     icon={ <Park /> }
-                    component={ Link } to='/root'
+                    component={ NavLink } to='/root'
                 />
                 <BottomNavigationAction
                     label="App"
                     value='/'
                     icon={ <Home /> }
-                    component={ Link } to='/'
+                    component={ NavLink } to='/'
+                    children={ <Cellar /> }
                 />
                 <BottomNavigationAction
                     label="Tests"
@@ -34,10 +36,10 @@ import './NavBar.css';
                     component={ Link } to='/test'
                 />
                 <BottomNavigationAction
-                    label="Dashboard"
-                    value="/dashboard"
+                    label="Cellars"
+                    value="/cellars"
                     icon={ <HelpOutline /> }
-                    component={ Link } to='/dashboard'
+                    component={ NavLink } to='/cellars'
                 />
             </BottomNavigation>
         </div>

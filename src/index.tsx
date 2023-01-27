@@ -8,9 +8,13 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 //pages
 import Root from './pages/Root';
 import Test from './pages/Test';
-import InventorySelection from './pages/InventorySelection';
+import ErrorPage from './pages/error-page';
+import CellarSelector from './pages/CellarSelector';
+import Cellar from './pages/Cellar';
+import CellarList from './components/CellarList';
 
 import NavBar from './components/NavBar';
+
 //root should probs include navbar
 /*const Root = () => /*<div>Root heading</div>;
 const Dashboard = () => <div>Dashboard</div>*/
@@ -22,6 +26,13 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: '/cellars/:cellarId',
+                element: <Cellar />,
+            },
+        ],
     },
     {
         path: '/root',
@@ -32,8 +43,8 @@ const router = createBrowserRouter([
         element: <Test />,
     },
     {
-        path: '/dashboard',
-        element: <InventorySelection />,
+        path: '/cellars',
+        element: <CellarSelector />,
     },
 ]);
 

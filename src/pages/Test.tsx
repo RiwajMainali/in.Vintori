@@ -9,7 +9,7 @@ export default function Test() {
     return (
         <div className="Test">
             <h1>testing page</h1>
-            <center><IconButton icon={<Add />}/></center>
+            {/*<center><IconButton icon={<Add />}/></center>*/}
             <NavBar />
 
             <WineCardButton />
