@@ -31,15 +31,15 @@ const IconButton: React.FC<iconImg> = ({children, onClick, /*size = 40,*/ icon, 
     return (
         <Box>
             {/*<div className="iconImg">*/}
-                <button 
+                <Button 
                     className='iconImg'
                     style={{ /*maxWidth: "36px", minWidth: "36px",*/ backgroundColor: 'transparent', border: 'none' }}
-                    //variant="outlined"
+                    variant="outlined"
                     onClick={ onClick ? onClick : handleClick }
                     >
                         {children}
                         {icon}
-                </button>
+                </Button>
             {/*</div>*/}
         </Box>
     );
