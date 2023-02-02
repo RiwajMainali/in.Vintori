@@ -80,7 +80,7 @@ const AddCellar: React.FC<FormData> = ({ cellarName, cellarWidth, cellarHeight})
                 </Dialog.Trigger>
                 <Dialog.Portal>
                     <Dialog.Overlay className='DialogOverlay'/>
-                    <Dialog.Content className='DialogContent'>
+                    <Dialog.Content className='AddCellarContent'>
                         <Dialog.Title className='DialogTitle'>
                             Add a Cellar
                         </Dialog.Title>
@@ -95,6 +95,7 @@ const AddCellar: React.FC<FormData> = ({ cellarName, cellarWidth, cellarHeight})
                             </label>
                             <input className='input' id='name' />
                         </fieldset>
+                        <AddCellarForm />
 
                         <Dialog.Close asChild>
                             <IconButton icon={<Close />} />

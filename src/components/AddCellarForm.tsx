@@ -1,61 +1,59 @@
 import React from 'react';
 import { useState } from 'react';
+import TextField from '@mui/material/TextField';
 
 interface FormProps {
-    open: boolean;
-    onClose: () => void;
+    open?: boolean;
+    onClose?: () => void;
 }
 
-const AddCellarForm: React.FC<FormProps> = ({ open, onClose }) => {
+const AddCellarForm: React.FC<FormProps> = ({ open }) => {
     const [name, setName] = useState('');
     const [height, setHeight] = useState('');
     const [width, setWidth] = useState('');
 
-    if (!open) {return null;}
+    //if (!open) {return null;}
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(name, height, width);
-        onClose();
+        //onClose();
     }
 
     return (
-        <div className='popup-form'>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    name: 
-                    <input
-                        type='name'
-                        value={name}
-                        onChange={ e => setName(e.target.value)}
-                        required
-                    />
-                </label>
-                <label>
-                    height: 
-                    <input
-                        type='height'
-                        value={height}
-                        onChange={ e => setHeight(e.target.value) }
-                        required
-                    />
-                </label>
-                <label>
-                    width:
-                    <input
-                        type='width'
-                        value={width}
-                        onChange={ e => setWidth(e.target.value) }
-                        required
-                    />
-                </label>
-
-                <div>
-                    <button type='submit'>submit</button>
-                    <button type='button' onClick={onClose}>cancel</button>
-                </div>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <TextField
+                label="New Cellar Name"
+                type='name'
+                value={name}
+                onChange={ e => setName(e.target.value)}
+                variant='standard'
+                required
+            />
+            <br/>
+            <TextField
+                label="Height"
+                helperText='# of slots in a column'
+                type='height'
+                value={height}
+                onChange={ e => setHeight(e.target.value) }
+                variant='standard'
+                required
+            />
+            <br/>
+            <TextField
+                label="Width"
+                helperText='# of slots in a row'
+                type='width'
+                value={width}
+                onChange={ e => setWidth(e.target.value) }
+                variant='standard'
+                required
+            />
+            <button type='submit'>
+                save
+            </button>
+        </form>
     );
 }
 
